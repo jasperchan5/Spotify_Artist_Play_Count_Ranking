@@ -45,6 +45,7 @@ router.get('/', async(req,res) => {
 })
 
 router.get('/getArtistTracks', async(req, res) => {
+    console.log("Start");
     const artistName = req.query.artistName;
     spotifyApi.setAccessToken(token);
     const artistData = await spotifyApi.search(artistName,['artist']);
